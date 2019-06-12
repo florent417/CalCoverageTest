@@ -231,7 +231,7 @@ namespace Calculator.Test.Unit
         {
             _uut.Add(2, 3);
             Assert.That(() => _uut.Divide(0), Throws.TypeOf<DivideByZeroException>());
-        //}
+        }
 
         //[TestCase(-2, 0.5)]
         //[TestCase(-2, (1.0 / 3.0))]
