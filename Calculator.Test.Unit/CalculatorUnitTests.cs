@@ -72,7 +72,7 @@ namespace Calculator.Test.Unit
 
         [TestCase(-2, 0.5)]
         [TestCase(-2, (1.0 / 3.0))]
-        [TestCase(0, -1)]
+       // [TestCase(0, -1)]
         public void Power_IncorrectParameters_ThrowsException(double b, double exp)
         {
             Assert.That(() => _uut.Power(b, exp), Throws.TypeOf<ArgumentOutOfRangeException>());
