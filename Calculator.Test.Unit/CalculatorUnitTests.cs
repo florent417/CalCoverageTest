@@ -249,6 +249,7 @@ namespace Calculator.Test.Unit
             _uut.Add(b, -0);
             Assert.That(() => _uut.Power(exp), Throws.TypeOf<ArgumentOutOfRangeException>());
         }
+        // added
 
     }
 }
