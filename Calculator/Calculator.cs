@@ -33,7 +33,7 @@ namespace Calculator
             {
                 throw new System.ArgumentOutOfRangeException("Result is not a number implying wrong usage");
             }
-            else if (result.Equals(double.NegativeInfinity))
+            else if (result.Equals(Double.NegativeInfinity))
             {
                 throw new System.ArgumentOutOfRangeException("Result is minus infinity");
             }
