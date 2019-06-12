@@ -72,7 +72,8 @@ namespace Calculator.Test.Unit
 
         [TestCase(-2, 0.5)]
         [TestCase(-2, (1.0 / 3.0))]
-       // [TestCase(0, -1)]
+        [TestCase(0, -1)]
+        [TestCase(-0, -1)]
         public void Power_IncorrectParameters_ThrowsException(double b, double exp)
         {
             Assert.That(() => _uut.Power(b, exp), Throws.TypeOf<ArgumentOutOfRangeException>());
@@ -240,16 +241,6 @@ namespace Calculator.Test.Unit
             _uut.Add(b, 0);
             Assert.That(() => _uut.Power(exp), Throws.TypeOf<ArgumentOutOfRangeException>());
         }
-
-        [TestCase(-2, 0.5)]
-        [TestCase(-2, (1.0 / 3.0))]
-        [TestCase(0, -1)]
-        public void Power_1ParameterMINIncorrectParameters_ThrowsException(double b, double exp)
-        {
-            _uut.Add(b, -0);
-            Assert.That(() => _uut.Power(exp), Throws.TypeOf<ArgumentOutOfRangeException>());
-        }
-        // added
 
     }
 }
